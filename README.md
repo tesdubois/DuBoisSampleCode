@@ -1,2 +1,2 @@
 # AzaveaJobApp
-This is the code I am submitting for the Entry-Level Software Engineer position at Azavea. 
+This is the code I am submitting for the Entry-Level Software Engineer position at Azavea. I am submitting R code, as it is the coding language I use currently. I understand that if granted this position, I would need to change languages. I have been interested in learning Python for some time and would welcome the occasion to do so. In the meantime, I hope you will be able to assess this R code sufficiently enough to determine my fit for this position.  
