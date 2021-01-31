@@ -18,8 +18,8 @@ library(readr)
 setwd("C:/Users/tdubois-adm/Downloads") #update this path as necessary.
 
 # Unzip the file and read in the data.
-unzip("AzaveaJobApp-main.zip")
-data <- read.csv("AzaveaJobApp-main/SampleCodeData.csv")
+unzip("DuBoisSampleCode-main.zip")
+data <- read.csv("DuBoisSampleCode-main/SampleCodeData.csv")
 
 # Make sure the date variable is formatted as such. 
 data$Date <- as.Date(data$Date)
@@ -33,7 +33,7 @@ schools <- unique(data$ES_ID) #This list of 160 schools takes hours to run and i
 schools <- schools[1:3] #So we'll reduce it to 3 schools.
 
 # Make a folder to put these in. 
-dir.create("AzaveaJobApp-main/GIFs") #This will show up in the unzipped version of the 'AzaveaJobApp-main' folder. 
+dir.create("DuBoisSampleCode-main/GIFs") #This will show up in the unzipped version of the 'DuBoisSampleCode-main' folder. 
 
 # Run through a for loop to generate a separate GIF for cases and deaths attributed to each catchment. 
 # Each catchments GIF will have their data displayed by a red line, which is drawn over the gray lines of all other catchments. 
@@ -70,7 +70,7 @@ for(s in schools){
   # This sets what should be animated, how fast should it change, and the size of the output. 
   animate(p, fps=20, height = 250, width =300)
   # Save the resulting GIF to the GIF folder. Name it based on the variable displayed and the elementary school ID (ES_ID). 
-  anim_save(paste0("AzaveaJobApp-main/GIFs/cases_", s, ".gif"))
+  anim_save(paste0("DuBoisSampleCode-main/GIFs/cases_", s, ".gif"))
   # Start the exact same thing over again, but this time for deaths rather than cases. 
   school_data <- D_data[which(D_data$ES_ID == s),]
   school_data$Date2 <- school_data$Date
@@ -88,5 +88,5 @@ for(s in schools){
           axis.text.y = element_text(face = "bold",size=18))+
     transition_reveal(Date2) 
   animate(p, fps=20, height = 250, width =300)
-  anim_save(paste0("AzaveaJobApp-main/GIFs/deaths_", s, ".gif"))
+  anim_save(paste0("DuBoisSampleCode-main/GIFs/deaths_", s, ".gif"))
 }
