@@ -19,7 +19,7 @@ setwd("C:/Users/tdubois-adm/Downloads") #update this path as necessary.
 
 # Unzip the file and read in the data.
 unzip("AzaveaJobApp-main.zip")
-data <- read.csv("AzaveaJobApp-main/COVID_GIFs_data.csv")
+data <- read.csv("AzaveaJobApp-main/SampleCodeData.csv")
 
 # Make sure the date variable is formatted as such. 
 data$Date <- as.Date(data$Date)
