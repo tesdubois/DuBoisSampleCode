@@ -33,7 +33,7 @@ schools <- unique(data$ES_ID) #This list of 160 schools takes hours to run and i
 schools <- schools[1:3] #So we'll reduce it to 3 schools.
 
 # Make a folder to put these in. 
-dir.create("AzaveaJobApp-main/GIFs")
+dir.create("AzaveaJobApp-main/GIFs") #This will show up in the unzipped version of the 'AzaveaJobApp-main' folder. 
 
 # Run through a for loop to generate a separate GIF for cases and deaths attributed to each catchment. 
 # Each catchments GIF will have their data displayed by a red line, which is drawn over the gray lines of all other catchments. 
