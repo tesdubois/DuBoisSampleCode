@@ -22,6 +22,9 @@ D_data <- subset(data, select = -c(Cases)) #taking out the column for cases to m
 schools <- unique(data$ES_ID) #This list of 160 schools takes hours to run and is not necessary for you to see how this code works.
 schools <- schools[1:10] #So we'll reduce it to 10 schools.
 
+# Make a folder to put these in. 
+dir.create("AzaveaJobApp-main/GIFs")
+
 # Run through a for loop to generate a separate GIF for cases and deaths attributed to each catchment. 
 # Each catchments GIF will have their data displayed by a red line, which is drawn over the gray lines of all other catchments. 
 
